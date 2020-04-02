@@ -225,7 +225,7 @@ controllerAdmin.post("/admin/hapus/pasien",isAuthorizedForAdmin,(req,res)=>{
 
         res.json({
             success:true,
-            message:"Perawat berhasil dihapus"
+            message:"Perawat berhasil dihapus oleh admin"
         })
     })
 })
