@@ -118,14 +118,14 @@ db.query(sql,data,(err,result)=>{
 })
 
 controllerPerawat.post("/hapus/perawat/data_pasien",isAuthorizedForPerawat,(req,res)=>{
-    let = "Delete * From pasien Where id = "+req.body.id
+    let = "Delete From pasien Where id = "+req.body.id
 
-    db.query(sql,(req,res)=>{
+    db.query(sql,(err,result)=>{
         if(err) throw err
 
         res.json({
             success:true,
-            message:"Pasien telah dihapus"
+            message:"Pasien telah dihapus oleh perawat"
         })
     })
 })
